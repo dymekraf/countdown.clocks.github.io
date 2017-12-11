@@ -1,0 +1,181 @@
+<script  src="js/time.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+#bottomban p {
+  font-family: roboto !important;
+}
+
+.scroll-left {
+height: 50px; 
+overflow: hidden;
+position: relative;
+}
+.scroll-left p {
+color: #fff !important;
+height: 8px !important;
+font-size: 5px !important;
+margin-top: -25px !important;
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+line-height: 50px;
+text-align: center;
+/* Starting position */
+-moz-transform:translateX(100%);
+-webkit-transform:translateX(100%); 
+transform:translateX(100%);
+/* Apply animation to this element */ 
+-moz-animation: scroll-left 20s linear infinite;
+-webkit-animation: scroll-left 20s linear infinite;
+animation: scroll-left 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+0% { -moz-transform: translateX(100%); }
+100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+0% { -webkit-transform: translateX(100%); }
+100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+0% { 
+-moz-transform: translateX(100%); /* Browser bug fix */
+-webkit-transform: translateX(100%); /* Browser bug fix */
+transform: translateX(100%); 
+}
+100% { 
+-moz-transform: translateX(-100%); /* Browser bug fix */
+-webkit-transform: translateX(-100%); /* Browser bug fix */
+transform: translateX(-100%); 
+}
+}
+
+
+
+.pane, .view {
+  background-color: red !important;
+}
+.single-post .post-excerpt img, .single-post .post-excerpt iframe {
+  margin-left: 0 !important;
+}
+.single-post .hentry {
+  padding: 0 !important;
+}
+.wrap {
+  height: 120px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 300px;
+  z-index: 1 !important;
+}
+.frame {
+    height: 786px;
+    border: 0;
+    -ms-transform: scale(0.50);
+    -moz-transform: scale(0.50);
+    -o-transform: scale(0.50);
+    -webkit-transform: scale(0.50);
+    transform: scale(0.50);
+    
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+p {
+  font-family: roboto !important;
+  letter-spacing: -0.01px !important;
+}
+.scroll-left p {
+  display: block !important;
+  float: left !important;
+  font-family: roboto,sans-serif !important;
+  letter-spacing: 0.1px;
+  top: 5px;
+}
+#bottomban {
+  max-width: 150px !important;
+}
+.location {
+  display:none !important;
+}
+footer {
+  margin: 0 auto;
+  max-width: 1220px !important;
+}
+.credits > p {
+  text-align: left;
+}
+.post-body > h2 {
+  display: none !important;
+}
+.content-module.post-wrapper.clearfix {
+  padding-top: 0px !important;
+}
+header {
+  display: none;
+}
+.hero-spacer {
+  display: none;
+}
+img {
+  width: 12px;
+}
+.scroll-left {
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 67px !important;
+}
+</style>
+
+
+
+
+
+
+<div class="location" id="location"></div>
+
+
+
+
+
+
+<div class="wrap">
+    <iframe class="frame" src="http://subwaytime.mta.info/index.html"></iframe>
+</div>
+
+<div id="bottomban" style="background: black none repeat scroll 0% 0%; position: relative; margin-top: 0px;">
+<div style="background: rgb(73, 73, 73) none repeat scroll 0% 0%; border-right: 0.5px solid rgb(255, 255, 255); height: 30px ! important; width: 61px; position: relative; z-index: 9999999 ! important;">
+<p style="color: rgb(255, 255, 255) ! important; letter-spacing: 0.1px; font-size: 5px; float: left; width: 27px ! important; padding-left: 7px; margin-top: 2px; top: 5px;" id="currentTime"></p>
+
+<div style="float: right; color: rgb(255, 255, 255) ! important; font-size: 5px ! important; font-family: roboto,sans-serif ! important; right: 12px ! important; position: relative; top: 2px ! important; left: -5px ! important; overflow: hidden; text-overflow: clip; white-space: nowrap; width: 6px ! important;">°F</div>
+
+<div class="weather" id="weather" style="float: right; letter-spacing: 0.1px; color: rgb(255, 255, 255) ! important; font-size: 5px ! important; font-family: roboto,sans-serif ! important; right: 12px ! important; position: relative; top: 2px ! important; left: -5px ! important; overflow: hidden; text-overflow: clip; white-space: nowrap; width: 6px ! important;"></div> 
+
+
+<p style="line-height: 0px ! important; margin: 0px 0px 0px -21px ! important; max-width: 9px ! important; float: right; position: absolute; width: 12px ! important; left: 52px; top: 0px;"><img style="margin: 0px ! important;" src="" class="weather-icon" id="weather-icon" />
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="scroll-left" style="position: relative; z-index: 999999 ! important; width: 150px ! important; top: -30px; background: black none repeat scroll 0% 0%;">
+<p>Please stand back from the platform edge.</p>
+</div>
+
+		
+<script  src="js/weather.js"></script>	
